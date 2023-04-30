@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kaisei Tokumin', serif;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    padding: 12px;
+    height: 70px;
+}
+.logo img {
+    width: 48px;
+    height: 48px;
+}
+header p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+.topImage img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    position: absolute;
+    top: 102px;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    animation: topImage 9s infinite;
+}
+@keyframes topImage {
+    0% {opacity: 0;}
+    5% {opacity: 1;}
+    35% {opacity: 1;}
+    40% {opacity: 0;}
+    100% {opacity: 0;}
+}
+.topImage img:nth-child(2) {
+    animation-delay: 3s;
+}
+.topImage img:nth-child(3) {
+    animation-delay: 6s;
+}
+main {
+    margin-top: 300px;
+    padding: 16px;
+}
+main > section {
+    margin: 64px 0;
+}
+h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+}
+.work ul {
+    list-style: none;
+    padding: 0;
+}
+.work li {
+    margin-bottom: 32px;
+}
+.work img {
+    width: 100%;
+}
+.work p {
+    margin: 6px;
+    text-align: center;
+}
+i {
+    color: #4699ca;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 4px;
+}
+i:hover {
+    opacity: 0.7;
+}
+.face img {
+    width: 136px;
+    border-radius: 50%;
+    border: 4px solid #3f3f3f;
+}
+.face {
+    width: 148px;
+    margin: 12px auto;
+}
+.face p {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+}
+footer {
+    margin: 0;
+    height: 48px;
+    background-color: #3f3f3f;
+    color: #fff;
+    text-align: center;
+    font-size: small;
+    line-height: 48px;
+}
+.contact {
+    width: 245px;
+    margin: 64px auto;
+}
+input, textarea {
+    width: 220px;
+    padding: 4px;
+    margin: 4px;
+}
+input {
+    height: 20px;
+}
+form > div {
+    margin: 8px auto;
+}
+button {
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    margin: 24px 60px;
+    cursor: pointer;
+}
+@media (min-width: 550px) {
+    .topImage img {
+        height: 320px;
+    }
+    main {
+        margin-top: 340px;
+    }
+    .work ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .work li {
+        width: calc(50% - 8px);
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .content > p {
+        width: calc(100% - 240px);
+        padding-right: 32px;
+    }
+}
+@media (min-width: 800px) {
+    .topImage img {
+        height: 400px;
+    }
+    main {
+        margin-top: 440px;
+    }
+    .intro p {
+        text-align: center;
+    }
+    .work li {
+        width: calc(33.3% - 10.7px);
+    }
+    .large {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 48px;
+    }
+    .profile {
+        width: 414px;
+    }
+    .contact {
+        margin: 0;
+    }
+}
+@media (min-width: 1000px) {
+    .logo {
+        padding-left: calc(50% - 475px);
+        padding-right: calc(50% - 475px);
+    }
+    main {
+        width: 950px;
+        padding-left: calc(50% - 475px);
+        padding-right: calc(50% - 475px);
+    }
+}
